@@ -1,18 +1,18 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Main = () => {
 
     return (
-        <div>
-            <h1 className="text-7xl font-bold underline">
-                Hello world!
-            </h1>
-
-
-            <button className="btn btn-primary">One</button>
-            <button className="btn btn-secondary">Two</button>
-            <button className="btn btn-accent btn-outline">Three</button>
-        </div>
+        <>
+            <div>
+                <Navbar></Navbar>
+                <Outlet></Outlet>
+                <Footer></Footer>
+            </div>
+        </>
     );
 };
 

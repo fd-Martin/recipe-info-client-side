@@ -9,13 +9,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Error from './components/Error/Error.jsx';
+import Login from './components/Login/Login.jsx';
+import Register from './components/Register/Register.jsx';
 
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Main></Main>,
-    errorElement:<Error></Error>
+    path:"/",
+    element:<Main></Main>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+    ]
   },
 ]);
 
