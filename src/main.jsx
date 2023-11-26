@@ -11,6 +11,7 @@ import {
 import Error from './components/Error/Error.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
+import Blog from './components/Blog/Blog.jsx';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
       },
     ]
   },
