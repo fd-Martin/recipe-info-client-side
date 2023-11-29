@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import recipe from '../Navbar/Recipe-Info.png'
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    // console.log(user);
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
-        <div>
-            <div className="navbar bg-base-100 container mx-auto">
+        <div className='bg-error'>
+            <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,17 +31,30 @@ const Navbar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-xl">Recipe-Info</Link>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1 text-xl font-bold">
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='blog'>Blog</Link></li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='blog'>Blog</Link></li>
-                        
-                    </ul>
+                <div>
+                    <Link to='/' className=""> <img className='w-18 mx-auto' src={recipe} /></Link>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {user ?
+                        <div className="avatar">
+                            <span className="w-16 tooltip  tooltip-bottom rounded-full" data-tip={user.displayName}>
+                                <img src={user.photoURL} />
+                            </span>
+                        </div>
+                        : null}
+                    {
+                        user ? <button className="btn btn-warning text-xl ms-5" onClick={handleLogOut}>LogOut</button> :
+                            <Link to='/login'>
+                                <button className="btn btn-primary text-xl">Login</button></Link>
+                    }
+
                 </div>
             </div>
         </div>

@@ -27,7 +27,7 @@ const Footer = () => {
                     </nav>
                     <form>
                         <header className="footer-title">Newsletter</header>
-                        <fieldset className="form-control w-80">
+                        <fieldset className="form-control w-1/5 sm:w-80">
                             <label className="label">
                                 <span className="label-text">Enter your email address</span>
                             </label>
