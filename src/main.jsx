@@ -14,6 +14,7 @@ import Register from './components/Register/Register.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import Home from './components/Home/Home.jsx';
+import RecipeData from './components/RecipesData/RecipesData.jsx';
 
 
 const router = createBrowserRouter([
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch(`https://recipe-info-server-side.vercel.app/recipes`)
       },
       {
         path: "/login",
