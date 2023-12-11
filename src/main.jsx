@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import '@smastrom/react-rating/style.css'
 
 import './index.css'
 import Main from './components/Main/Main.jsx';
@@ -15,7 +16,7 @@ import Blog from './components/Blog/Blog.jsx';
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import Home from './components/Home/Home.jsx';
 import RecipeData from './components/RecipesData/RecipesData.jsx';
-import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
+import ChefRecipesDetails from './components/ChefRecipesDetails/ChefRecipesDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,9 +31,9 @@ const router = createBrowserRouter([
         loader: () => fetch(`https://recipe-info-server-side.vercel.app/recipes`)
       },
       {
-        path:"recipes/:id",
-        element:<ChefDetails></ChefDetails>,
-        loader: ({params}) => fetch(`https://recipe-info-server-side.vercel.app/recipes/${params.id}`)
+        path: "recipes/:id",
+        element: <ChefRecipesDetails></ChefRecipesDetails>,
+        loader: ({ params }) => fetch(`https://recipe-info-server-side.vercel.app/recipes/${params.id}`)
       },
       {
         path: "/login",
