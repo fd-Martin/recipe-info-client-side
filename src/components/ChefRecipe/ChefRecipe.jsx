@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating';
 import { FcLike } from "react-icons/fc";
+import toast, { Toaster } from 'react-hot-toast';
 const ChefRecipe = ({ recipe }) => {
     const { foodPhoto, name, cooking_method, rating, ingredients } = recipe;
     const [raTing, setRaTing] = useState();
+    const [clicked, setClicked] = useState(false);
+    const notify = () => toast('Your favourite recipe has selected.');
+    const handleDisable = (event) => {
+        setClicked(true)
+        notify();
+    }
     return (
         <div className=' mx-auto'>
             <div className='card w-96 mx-auto md:w-full xl:w-96 h-full border-4 bg-base-100 hover:shadow-xl'>
@@ -25,7 +32,7 @@ const ChefRecipe = ({ recipe }) => {
                         ingredients.map((ingredient, i) => <span key={i}>{i + 1}. {ingredient}</span>)
                     }
                     <div className="card-actions justify-start">
-                        <button className="btn btn-outline"><FcLike />Favourite</button>
+                        <button className="btn btn-outline" onClick={handleDisable} disabled={clicked}><FcLike />Favourite</button><Toaster />
                     </div>
                 </div>
             </div>

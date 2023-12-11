@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import '@smastrom/react-rating/style.css'
-
 import './index.css'
 import Main from './components/Main/Main.jsx';
 
@@ -15,7 +14,6 @@ import Register from './components/Register/Register.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import AuthProvider from './components/AuthProvider/AuthProvider.jsx';
 import Home from './components/Home/Home.jsx';
-import RecipeData from './components/RecipesData/RecipesData.jsx';
 import ChefRecipesDetails from './components/ChefRecipesDetails/ChefRecipesDetails.jsx';
 
 
