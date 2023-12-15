@@ -34,24 +34,23 @@ const Blog = () => {
                 <div className="bg-white p-6 rounded-lg">
                     <h2 className="text-4xl font-bold mb-2">Tell us the difference between nodejs and express js.</h2>
                     <h4 className='text-xl font-bold my-2'>Node.js</h4>
-                    <div className='text-justify'>
-                        <p className="text-gray-600">
+                    <div className='text-justify text-gray-600'>
                             <ul >
                                 <li> <b>Definition:</b> Node.js is a JavaScript runtime that allows the execution of JavaScript code on the server side.</li>
                                 <li><b> Role:</b> It provides the core runtime environment for server-side JavaScript execution.</li>
                                 <li> <b>Functionality:</b> Node.js handles asynchronous tasks efficiently, making it suitable for scalable network applications.</li>
                             </ul>
-                        </p>
+                      
                         <h4 className='text-xl font-bold my-2'>Express.js:</h4>
-                        <p className="text-gray-600">
-                            <ul>
+                        
+                            <ul className="text-gray-600">
                                 <li><b>Definition:</b> Express.js is a web application framework for Node.js.</li>
                                 <li><b>Role:</b> It simplifies the process of building web applications and APIs on top of Node.js.</li>
                                 <li><b>Functionality:</b>Express.js provides features like routing, middleware support, and simplified HTTP methods for handling requests.</li>
                             </ul>
                             <br />
                             <i className=' font-bold'> In summary, Node.js is the runtime environment, and Express.js is a framework built on top of Node.js, offering additional tools and abstractions for web application development.</i>
-                        </p>
+                        
                     </div>
                 </div>
                 {/* Blog Post 4 */}

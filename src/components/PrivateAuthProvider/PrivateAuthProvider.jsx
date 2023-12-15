@@ -7,7 +7,7 @@ const PrivateAuthProvider = ({ children }) => {
     const location = useLocation();
     if (loading) {
         return <div className=' mx-auto h-96 flex justify-center'>
-            <div className="loading loading-dots loading-lg "></div>
+            <div className="loading loading-bars loading-lg"></div>
         </div>
     }
 

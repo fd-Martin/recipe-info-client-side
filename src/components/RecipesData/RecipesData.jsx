@@ -15,11 +15,12 @@ const RecipesData = () => {
                 <h1 className="my-5 text-5xl font-bold  text-center underline underline-offset-8">Our Chef's</h1>
             </div>
 
-            <div className=' container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2  my-10'>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2  my-10'>
                 {
-                    recipesData.slice(0, seeMore ? 8 : 3).map(recipeData => <RecipeSingleData key={recipeData.id} recipeData={recipeData}></RecipeSingleData>)
+                    recipesData.slice(0, seeMore ? 8 : 3).map(recipeData => <RecipeSingleData key={recipeData.id} recipeData={recipeData} ></RecipeSingleData>)
                 }
             </div>
+
             <div className='text-center'>
                 <button className=' btn btn-primary text-white px-5 py-2 mx-auto  rounded-md' onClick={handleShowAll} >
                     {

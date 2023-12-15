@@ -3,7 +3,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const { user, signIn } = useContext(AuthContext);
+    const { user, googleSignIn, githubSignIn, signIn } = useContext(AuthContext);
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,6 +26,22 @@ const Login = () => {
                 form.reset();
             });
     }
+
+    const handleWithGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                navigate(from, { replace: true })
+            })
+    }
+    const handleWithGithubSignIn = () => {
+        githubSignIn()
+            .then((result) => {
+                const user = result.user;
+                navigate(from, { replace: true })
+            })
+    }
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -53,11 +69,12 @@ const Login = () => {
                             </div>
                         </form>
                         <div>
-                            <button className='btn btn-danger'>SignIn with google</button>
+                            <button className='btn btn-error' onClick={handleWithGoogleSignIn}>SignIn with google</button>
                         </div>
                         <div>
-                            <button className='btn btn-danger'>SignIn with Github</button>
+                            <button className='btn btn-error' onClick={handleWithGithubSignIn}>SignIn with Github</button>
                         </div>
+                        
                     </div>
                 </div>
             </div>

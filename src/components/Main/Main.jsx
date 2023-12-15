@@ -6,13 +6,15 @@ import Footer from '../Footer/Footer';
 const Main = () => {
 
     const navigation = useNavigation();
-    console.log(navigation);
+
     return (
         <>
             <div>
                 <Navbar></Navbar>
                 <div className={`min-h-[calc(90vh-300px)] `} >
-                    {navigation.state === "loading" ? <span className="loading loading-bars loading-lg"></span> : <Outlet></Outlet>}
+                    {navigation.state === "loading" ? <div className=' mx-auto h-96 flex justify-center'>
+                        <div className="loading loading-bars loading-lg"></div>
+                    </div> : <Outlet></Outlet>}
                 </div>
                 <Footer className="mb-auto"></Footer>
             </div>
