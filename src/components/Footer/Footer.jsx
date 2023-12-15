@@ -27,12 +27,12 @@ const Footer = () => {
                     </nav>
                     <form>
                         <header className="footer-title">Newsletter</header>
-                        <fieldset className="form-control w-1/5 sm:w-80">
+                        <fieldset className="form-control ">
                             <label className="label">
                                 <span className="label-text">Enter your email address</span>
                             </label>
-                            <div className="join">
-                                <input type="text" placeholder="username@site.com" className="input input-bordered join-item" />
+                            <div className="join ">
+                                <input type="text" placeholder="username@site.com" className="input input-bordered join-item w-full" />
                                 <button className="btn btn-primary join-item">Subscribe</button>
                             </div>
                         </fieldset>

@@ -4,7 +4,6 @@ import { FcLike } from "react-icons/fc";
 import toast, { Toaster } from 'react-hot-toast';
 const ChefRecipe = ({ recipe }) => {
     const { foodPhoto, name, cooking_method, rating, ingredients } = recipe;
-    const [raTing, setRaTing] = useState();
     const [clicked, setClicked] = useState(false);
     const notify = () => toast('Your favourite recipe has selected.');
     const handleDisable = (event) => {

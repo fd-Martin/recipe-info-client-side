@@ -3,7 +3,6 @@ import { useRouteError } from 'react-router-dom';
 import errorImg from '../Error/pngwing.com.png';
 const Error = () => {
     const error = useRouteError();
-    // console.log(error);
     return (
         <div>
             <div className='max-w-4xl mx-auto px-5 py-10 text-center'>

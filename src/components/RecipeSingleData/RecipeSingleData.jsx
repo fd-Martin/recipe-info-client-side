@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
 
 const RecipeSingleData = ({ recipeData }) => {
-    console.log(recipeData);
     const { id, chefPhoto, chefName, experience, num_recipes, likes } = recipeData;
+
     return (
 
-        <div className='mx-auto my-5' >
+        <div className={`mx-auto my-5`} >
             <div div className="card w-96 mx-auto md:w-full xl:w-96 h-full border-4 bg-base-100 hover:shadow-xl">
                 <figure><img src={chefPhoto} className='h-96 w-46 md:w-full ' alt="Shoes" /></figure>
                 <div className="card-body py-3">

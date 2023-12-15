@@ -5,7 +5,6 @@ import RecipeSingleData from '../RecipeSingleData/RecipeSingleData';
 const RecipesData = () => {
     const recipesData = useLoaderData();
 
-    console.log(recipesData);
     const [seeMore, setSeeMore] = useState(false);
     const handleShowAll = () => {
         setSeeMore(!seeMore);
