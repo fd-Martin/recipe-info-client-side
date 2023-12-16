@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaGithubSquare, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const { user, googleSignIn, githubSignIn, signIn } = useContext(AuthContext);
@@ -48,7 +49,7 @@ const Login = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body" onSubmit={handleLogin}>
+                        <form className="card-body pb-0" onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -65,16 +66,18 @@ const Login = () => {
                                 <p className='text-error'>{error}</p>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-outline">Login</button>
                             </div>
                         </form>
-                        <div>
-                            <button className='btn btn-error' onClick={handleWithGoogleSignIn}>SignIn with google</button>
+                        <div className='card-body pt-0'>
+                            <div className='form-control mt-2'>
+                                <button className='btn btn-outline' onClick={handleWithGoogleSignIn}> <FaGoogle /> Continue with Google</button>
+                            </div>
+                            <div className='form-control mt-2'>
+                                <button className='btn btn-outline' onClick={handleWithGithubSignIn}> <FaGithubSquare /> Continue with Github</button>
+                            </div>
                         </div>
-                        <div>
-                            <button className='btn btn-error' onClick={handleWithGithubSignIn}>SignIn with Github</button>
-                        </div>
-                        
+
                     </div>
                 </div>
             </div>

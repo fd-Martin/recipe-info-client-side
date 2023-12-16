@@ -40,10 +40,7 @@ const Register = () => {
                 .catch((error) => {
                     setError(error.message);
                 })
-
         }
-
-
     }
     return (
         <div>
@@ -56,7 +53,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
-                                <input type="text" placeholder="Name" name="name" className="input input-bordered" required />
+                                <input type="text" placeholder="Name" name="name" className="input input-bordered"  />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -75,12 +72,12 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" placeholder="Name" name="photo" className="input input-bordered" required />
+                                <input type="text" placeholder="Name" name="photo" className="input input-bordered"  />
                             </div>
                             <p className='text-error'>{error}</p>
                             <p>Already  have any account?Please <Link to='/login' className=" link link-hover text-primary">Login</Link> </p>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                            <div className="form-control mt-2">
+                                <button className="btn btn-outline">Register</button>
                             </div>
                         </form>
 

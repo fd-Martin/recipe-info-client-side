@@ -7,6 +7,7 @@ const RecipeSingleData = ({ recipeData }) => {
     return (
         <div className=" " >
             <div className="card w-3/4 my-5 md:w-full mx-auto xl:w-96 h-full border-4 bg-base-100 hover:shadow-xl">
+
                 <figure><img src={chefPhoto} className='h-96 w-46 md:w-full ' alt="" /></figure>
                 <div className="card-body py-3">
                     <h2 className="card-title py-3 my-3">Chef Name:{chefName}</h2>

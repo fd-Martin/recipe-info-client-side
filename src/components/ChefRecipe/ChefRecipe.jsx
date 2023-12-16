@@ -12,7 +12,7 @@ const ChefRecipe = ({ recipe }) => {
     }
     return (
         <div className=' mx-auto'>
-            <div className='card w-96 mx-auto md:w-full xl:w-96 h-full border-4 bg-base-100 hover:shadow-xl'>
+            <div className='card w-4/5 mx-auto md:w-full xl:w-96 h-full border-4 bg-base-100 hover:shadow-xl'>
                 <figure><img src={foodPhoto} className='h-96 w-96 ' alt="Album" /></figure>
                 <div className="card-body py-3">
                     <h2 className="card-title py-3 my-3 font-bold">Chef Name:{name}</h2>
