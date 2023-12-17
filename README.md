@@ -1,8 +1,24 @@
-# React + Vite
+# Recipe-Info
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recipe-Info is a web-based  food's recipe related website
 
-Currently, two official plugins are available:
+## Authors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@fd-Martin](https://github.com/fd-Martin)
+
+## Key Points
+
+
+- There is a navbar section and a footer section.These will show every routes.
+- In Home page,There is a bannar section,Chef's section,marquee section,event info. 
+- When we will click view recipes button ,it will redirect to the Chef Recipes page.
+- In Chef Recipes page,There is a bannar section where show us Chef's personal information.
+- In Chef Recipes page ,there have some chef's recipe item.
+- When we click favourite button , it will show message by toast.At the same time  favourite button will disable.
+- There is error components,when we go to wrong route.
+
+
+## Live Link
+
+https://github.com/fd-Martin
+

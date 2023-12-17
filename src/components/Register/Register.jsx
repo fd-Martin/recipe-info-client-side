@@ -6,7 +6,7 @@ import { updateProfile } from 'firebase/auth';
 const Register = () => {
     const { user, createUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
-    const navigateToLoginPage=useNavigate();
+    const navigateToLoginPage = useNavigate();
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -53,7 +53,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">User Name</span>
                                 </label>
-                                <input type="text" placeholder="Name" name="name" className="input input-bordered"  />
+                                <input type="text" placeholder="Name" name="name" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -72,7 +72,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" placeholder="Name" name="photo" className="input input-bordered"  />
+                                <input type="text" placeholder="Name" name="photo" className="input input-bordered" />
                             </div>
                             <p className='text-error'>{error}</p>
                             <p>Already  have any account?Please <Link to='/login' className=" link link-hover text-primary">Login</Link> </p>

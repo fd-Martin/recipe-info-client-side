@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from '../Bannar/Bannar';
 import Feautured from '../Featured/feautured';
-import { useLoaderData } from 'react-router-dom';
 import RecipesData from '../RecipesData/RecipesData';
 import Event from '../Event/Event';
 

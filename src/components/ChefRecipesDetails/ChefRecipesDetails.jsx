@@ -8,7 +8,7 @@ const ChefRecipesDetails = () => {
     return (
         <div>
             {
-                viewChefRecipes.map((viewRecipe, i) =><ViewChefRecipeData viewRecipe={viewRecipe} key={i}></ViewChefRecipeData> )
+                viewChefRecipes.map((viewRecipe, i) => <ViewChefRecipeData viewRecipe={viewRecipe} key={i}></ViewChefRecipeData>)
             }
         </div>
     );

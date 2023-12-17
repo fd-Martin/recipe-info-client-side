@@ -10,7 +10,6 @@ const Banner = () => {
                     <div className="max-w-lg">
                         <h1 className="mb-5 text-5xl font-bold">Welcome To Our Recipe-Info & Learn Recipes From Our Chef's </h1>
                         <p className="mb-5 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, iusto sint. Fuga explicabo delectus, adipisci perferendis dolore nesciunt praesentium quos.</p>
-
                         <Link to='/'><button className="btn btn-primary text-xl px-5 py-3">Get Started</button></Link>
                     </div>
                 </div>

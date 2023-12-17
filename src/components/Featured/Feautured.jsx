@@ -9,9 +9,7 @@ import Five from '../Featured/5.png';
 const Feautured = () => {
     return (
         <div className='max-w-5xl mx-auto my-10'>
-
             <h1 className='font-bold text-2xl text-center my-5'>As Featured In</h1>
-
             <Marquee pauseOnHover={true} >
                 <div className='flex flex-row  justify-evenly gap-24 '>
                     <div className="mx-auto">

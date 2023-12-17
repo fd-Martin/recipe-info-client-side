@@ -13,7 +13,6 @@ const Navbar = () => {
     return (
         <div className='bg-error'>
             <div className="navbar container mx-auto">
-                {/* /////////////////////////// */}
                 <div className="navbar-start">
                     <div className="dropdown md:hidden text-2xl">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -40,7 +39,6 @@ const Navbar = () => {
                                             <button className="btn btn-primary text-xl  w-full">Login</button></Link>
                                     </div>
                             }
-
                         </ul>
                     </div>
                     <div className="navbar-center hidden md:flex">
@@ -61,13 +59,11 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                {/* /////////////////////////////////// */}
                 <div className='mx-auto'>
                     <div className="navbar-center w-4/5">
                         <Link to='/'> <img className=' mx-auto px-4 ' src={recipe} /></Link>
                     </div>
                 </div>
-                {/* /////////////////////////////// */}
                 <div className="navbar-end gap-3 hidden mx-0 md:flex">
                     <div className='flex items-center'> {user ?
                         <div className="avatar">

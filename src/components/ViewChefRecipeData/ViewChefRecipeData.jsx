@@ -25,7 +25,7 @@ const ViewChefRecipeData = ({ viewRecipe }) => {
                 </div>
             </div>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center   gap-2 my-10">
-                {recipes.slice(0, seeMore ?100 : 2).map((recipe, i) =>
+                {recipes.slice(0, seeMore ? 6 : 2).map((recipe, i) =>
                     <ChefRecipe recipe={recipe} key={i} >
                     </ChefRecipe>
                 )}
